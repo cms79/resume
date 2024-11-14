@@ -1,8 +1,9 @@
 ﻿@using Resume.Models
+@inject IJSRuntime JSRuntime
 
 @if(Company is not null)
 {
-    <MudStack Row="true" Wrap="Wrap.NoWrap" AlignItems="AlignItems.Center" Style="margin-bottom:2em;">
+    <MudStack Row="true" Wrap="@wrapMode" AlignItems="AlignItems.Center" Style="margin-bottom:2em;">
         <MudImage Style="border-radius: 10px" Fluid="true" ObjectFit="ObjectFit.Cover" Src="@Company.ImageLink" Alt="@Company.AltText" />
         <div>
             <MudText Typo="Typo.h4">@Company.CompanyName</MudText>
@@ -15,4 +16,29 @@
 
 @code {
     [Parameter] public Company? Company { get; set; }
+
+    private Wrap wrapMode = Wrap.NoWrap;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("resizeObserver.observe", DotNetObjectReference.Create(this));
+        }
+    }
+
+    [JSInvokable]
+    public void OnResize(int width)
+    {
+        if (width < 600)
+        {
+            wrapMode = Wrap.Wrap;
+        }
+        else
+        {
+            wrapMode = Wrap.NoWrap;
+        }
+
+        InvokeAsync(StateHasChanged);
+    }
 }
