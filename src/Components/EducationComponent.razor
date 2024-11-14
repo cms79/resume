@@ -1,0 +1,23 @@
+﻿<MudStack Row="true" Wrap="Wrap.Wrap" Style="margin-bottom:2em;">
+    <MudImage Style="border-radius: 10px" Fluid="true" ObjectFit="ObjectFit.Cover" Src="@ImageLink" Alt="@altText" />
+    <div>
+        <MudText Typo="Typo.h4">@Degree</MudText>
+        <MudText Typo="Typo.h5">@School</MudText>
+        <MudText Typo="Typo.h5">@Location</MudText>
+        <MudText Typo="Typo.h5">@GraduationDate</MudText>
+        <MudLink Href="@ExternalLink" Target="_blank">@ExternalLink</MudLink>
+    </div>
+</MudStack>
+
+@code {
+    [Parameter] public string ImageLink { get; set; } = string.Empty;
+    [Parameter] public string Degree { get; set; } = string.Empty;
+    [Parameter] public string School { get; set; } = string.Empty;
+    [Parameter] public string Location { get; set; } = string.Empty;
+    [Parameter] public string GraduationDate { get; set; } = string.Empty;
+    [Parameter] public string ExternalLink { get; set; } = string.Empty;
+
+    private string altText = string.Empty;
+
+    protected override void OnParametersSet() => altText = $"Logo for {School}";
+}
