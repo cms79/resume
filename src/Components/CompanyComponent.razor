@@ -1,21 +1,18 @@
-﻿<MudStack Row="true" Wrap="Wrap.NoWrap" AlignItems="AlignItems.Center" Style="margin-bottom:2em;">
-    <MudImage Style="border-radius: 10px" Fluid="true" ObjectFit="ObjectFit.Cover" Src="@ImageLink" Alt="@altText" />
-    <div>
-        <MudText Typo="Typo.h4">@CompanyName</MudText>
-        <MudText Typo="Typo.h5">@Location</MudText>
-        <MudText Typo="Typo.body1">@Summary</MudText>
-        <MudLink Href="@ExternalLink" Target="_blank">@ExternalLink</MudLink>
-    </div>
-</MudStack>
+﻿@using Resume.Models
+
+@if(Company is not null)
+{
+    <MudStack Row="true" Wrap="Wrap.NoWrap" AlignItems="AlignItems.Center" Style="margin-bottom:2em;">
+        <MudImage Style="border-radius: 10px" Fluid="true" ObjectFit="ObjectFit.Cover" Src="@Company.ImageLink" Alt="@Company.AltText" />
+        <div>
+            <MudText Typo="Typo.h4">@Company.CompanyName</MudText>
+            <MudText Typo="Typo.h5">@Company.Location</MudText>
+            <MudText Typo="Typo.body1">@Company.Summary</MudText>
+            <MudLink Href="@Company.ExternalLink" Target="_blank">@Company.ExternalLink</MudLink>
+        </div>
+    </MudStack>
+}
 
 @code {
-    [Parameter] public string ImageLink { get; set; } = string.Empty;
-    [Parameter] public string CompanyName { get; set; } = string.Empty;
-    [Parameter] public string Location { get; set; } = string.Empty;
-    [Parameter] public string Summary { get; set; } = string.Empty;
-    [Parameter] public string ExternalLink { get; set; } = string.Empty;
-
-    private string altText = string.Empty;
-
-    protected override void OnParametersSet() => altText = $"Logo for {CompanyName}";
+    [Parameter] public Company? Company { get; set; }
 }

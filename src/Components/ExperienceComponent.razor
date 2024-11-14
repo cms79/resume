@@ -1,0 +1,22 @@
+﻿@using Resume.Models
+
+<MudGrid Spacing="0" Style="margin-bottom:2em">
+    <MudItem>
+        <CompanyComponent Company="@Company" />
+    </MudItem>
+
+    @foreach (var experience in Experiences)
+    {
+        <MudItem xs="4"></MudItem>
+        <MudItem xs="8" Style="margin-bottom:1em">
+            <MudText Typo="Typo.h5">@experience.Title</MudText>
+            <MudText Typo="Typo.body1">@experience.Date</MudText>
+            <MudText Typo="Typo.body1">@experience.Summary</MudText>
+        </MudItem>
+    }
+</MudGrid>
+
+@code {
+    [Parameter] public Company? Company { get; set; }
+    [Parameter] public IEnumerable<Experience> Experiences { get; set; } = [];
+}
