@@ -3,35 +3,51 @@
 
 <PageTitle>Introduction</PageTitle>
 
-<MudImage Style="max-width:400px;margin-top:2em;" Src="/images/shaw-profile-pic.jpg" Alt="Profile Pic" />
+<div class="background-image-container" style="background-image: url('/images/shaw-bjj-office-wide.jpg');margin-bottom:2em;">
+    <div class="overlay-text">
+        <MudText Typo="Typo.h2">Christopher Shaw</MudText>
+        <MudStack Row="true" Justify="Justify.Center" AlignItems="AlignItems.Center">
+            <MudText Typo="Typo.h6" Align="Align.Center">Consultant</MudText>
+            <MudDivider Vertical="true" FlexItem="true" />
+            <MudText Typo="Typo.h6" Align="Align.Center">Combat Veteran</MudText>
+            <MudDivider Vertical="true" FlexItem="true" />
+            <MudText Typo="Typo.h6" Align="Align.Center">BJJ Black Belt</MudText>
+        </MudStack>
+    </div>
+</div>
 
-<MudText Typo="Typo.h2">Christopher M. Shaw</MudText>
-
-<MudStack Row="true" AlignItems="AlignItems.Center" Style="margin-bottom:1em">
-    <MudText Typo="Typo.h6" Align="Align.Center">Consultant</MudText>
-    <MudDivider Vertical="true" FlexItem="true" />
-    <MudText Typo="Typo.h6" Align="Align.Center">Combat Veteran</MudText>
-    <MudDivider Vertical="true" FlexItem="true" />
-    <MudText Typo="Typo.h6" Align="Align.Center">BJJ Black Belt</MudText>
-</MudStack>
-
-<MudText Typo="Typo.body1" Style="margin-bottom:1em">
-    I am a passionate technology enthusiast dedicated to 
-    leveraging the power of modern software to create innovative solutions 
-    that enhance everyday life. With a deep expertise in the 
-    Microsoft .NET tech stack, I thrive on transforming 
+<MudText Typo="Typo.body1" GutterBottom="true">
+    I am a passionate technology enthusiast dedicated to
+    leveraging the power of modern software to create innovative solutions
+    that enhance everyday life. With a deep expertise in the
+    Microsoft .NET tech stack, I thrive on transforming
     complex challenges into seamless, user-friendly applications.
     As a non-commissioned officer in the United States Army,
     I bring a disciplined, mission-driven approach to problem-solving and team collaboration.
 </MudText>
 
-<MudText Typo="Typo.h4" Style="margin-bottom:0.5em">Tech Stack:</MudText>
+<MudText Typo="Typo.body1" GutterBottom="true">
+    To contact me, visit my <MudLink Href="https://www.linkedin.com/in/cshaw79" Target="_blank">LinkedIn profile</MudLink>.
+    If you're interested in jiu-jitsu, follow me on <MudLink Href="https://www.instagram.com/cshawbjj/" Target="_blank">Instagram</MudLink>.
+</MudText>
 
-<MudStack Row="true" Wrap="Wrap.Wrap" AlignItems="AlignItems.Start" Style="margin-bottom:2em">
-    <TechStackLogoComponent ImageLink="/images/net-core-logo.svg" Name=".NET Core" />
-    <TechStackLogoComponent ImageLink="/images/blazor-logo.png" Name="Blazor" />
-    <TechStackLogoComponent ImageLink="/images/sql-server-logo.png" Name="SQL Server" />
-    <TechStackLogoComponent ImageLink="/images/azure-logo.svg" Name="Azure" />
-    <TechStackLogoComponent ImageLink="/images/github-mark.svg" Name="Github" />
-    <TechStackLogoComponent ImageLink="/images/docker-mark-blue.svg" Name="Docker" />
-</MudStack>
+<MudText Typo="Typo.body1">
+    This site was developed using <MudLink Href="https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor" Target="_blank">Blazor WebAssembly</MudLink>,
+    <MudLink Href="https://mudblazor.com/" Target="_blank">MudBlazor</MudLink>,
+    and <MudLink Href="https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-9/overview" Target="_blank">.NET 9</MudLink>.
+</MudText>
+
+<div id="techstack" class="page-div"></div>
+<TechStack />
+
+<div id="experience" class="page-div"></div>
+<Experience />
+
+<div id="education" class="page-div"></div>
+<Education />
+
+<div id="awards" class="page-div"></div>
+<Awards />
+
+<div id="clients" class="page-div"></div>
+<Clients />

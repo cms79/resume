@@ -11,12 +11,30 @@
         </div>
     </MudStack>
 
-    <MudText Typo="Typo.body1" Style="@_marginBottom">@Company.Summary</MudText>
+    <MudText Typo="Typo.body1" class="@summaryClass">@Company.Summary</MudText>
+
+    <div style="@_marginBottom">
+        @if (showFullSummary)
+        {
+            <MudLink Href="javascript:void(0);" OnClick="ToggleSummary">See Less</MudLink>
+        }
+        else
+        {
+            <MudLink Href="javascript:void(0);" OnClick="ToggleSummary">See More</MudLink>
+        }
+    </div>
 }
 
 @code {
     [Parameter] public Company? Company { get; set; }
     [Parameter] public string MarginBottom { get; set; } = "0em";
 
+    private bool showFullSummary = false;
     private string _marginBottom => $"margin-bottom:{MarginBottom}";
+    private string summaryClass => showFullSummary ? string.Empty : "truncate";
+
+    private void ToggleSummary()
+    {
+        showFullSummary = !showFullSummary;
+    }
 }

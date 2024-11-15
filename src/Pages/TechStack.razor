@@ -1,0 +1,15 @@
+﻿@page "/techstack"
+@using Resume.Components
+
+<PageTitle>Primary Tech Stack</PageTitle>
+
+<MudText Typo="Typo.h2" GutterBottom="true">Primary Tech Stack</MudText>
+
+<MudStack Row="true" Wrap="Wrap.Wrap" AlignItems="AlignItems.Start">
+    <TechStackLogoComponent ImageLink="/images/net-core-logo.svg" Name=".NET Core" />
+    <TechStackLogoComponent ImageLink="/images/blazor-logo.png" Name="Blazor" />
+    <TechStackLogoComponent ImageLink="/images/sql-server-logo.png" Name="SQL Server" />
+    <TechStackLogoComponent ImageLink="/images/azure-logo.svg" Name="Azure" />
+    <TechStackLogoComponent ImageLink="/images/github-mark.svg" Name="Github" />
+    <TechStackLogoComponent ImageLink="/images/docker-mark-blue.svg" Name="Docker" />
+</MudStack>
