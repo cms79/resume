@@ -1,0 +1,9 @@
+﻿<div style="text-align:center;">
+    <MudImage Src="@ImageLink" Alt="@Name" Height="75" Width="75" title="@Name" />
+    <MudText Typo="Typo.body1">@Name</MudText>
+</div>
+
+@code {
+    [Parameter] public string ImageLink { get; set; } = string.Empty;
+    [Parameter] public string Name { get; set; } = string.Empty;
+}

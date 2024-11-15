@@ -1,4 +1,5 @@
 ﻿@page "/"
+@using Resume.Components
 
 <PageTitle>Introduction</PageTitle>
 
@@ -6,12 +7,31 @@
 
 <MudText Typo="Typo.h2">Christopher M. Shaw</MudText>
 
-<MudText Typo="Typo.h5">Software Consultant | Combat Veteran | BJJ Black Belt</MudText>
+<MudStack Row="true" AlignItems="AlignItems.Center" Style="margin-bottom:1em">
+    <MudText Typo="Typo.h6" Align="Align.Center">Consultant</MudText>
+    <MudDivider Vertical="true" FlexItem="true" />
+    <MudText Typo="Typo.h6" Align="Align.Center">Combat Veteran</MudText>
+    <MudDivider Vertical="true" FlexItem="true" />
+    <MudText Typo="Typo.h6" Align="Align.Center">BJJ Black Belt</MudText>
+</MudStack>
 
-<MudText Typo="Typo.body1">
+<MudText Typo="Typo.body1" Style="margin-bottom:1em">
     I am a passionate technology enthusiast dedicated to 
     leveraging the power of modern software to create innovative solutions 
     that enhance everyday life. With a deep expertise in the 
     Microsoft .NET tech stack, I thrive on transforming 
     complex challenges into seamless, user-friendly applications.
+    As a non-commissioned officer in the United States Army,
+    I bring a disciplined, mission-driven approach to problem-solving and team collaboration.
 </MudText>
+
+<MudText Typo="Typo.h4" Style="margin-bottom:0.5em">Tech Stack:</MudText>
+
+<MudStack Row="true" Wrap="Wrap.Wrap" AlignItems="AlignItems.Start" Style="margin-bottom:2em">
+    <TechStackLogoComponent ImageLink="/images/net-core-logo.svg" Name=".NET Core" />
+    <TechStackLogoComponent ImageLink="/images/blazor-logo.png" Name="Blazor" />
+    <TechStackLogoComponent ImageLink="/images/sql-server-logo.png" Name="SQL Server" />
+    <TechStackLogoComponent ImageLink="/images/azure-logo.svg" Name="Azure" />
+    <TechStackLogoComponent ImageLink="/images/github-mark.svg" Name="Github" />
+    <TechStackLogoComponent ImageLink="/images/docker-mark-blue.svg" Name="Docker" />
+</MudStack>
