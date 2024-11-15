@@ -1,44 +1,22 @@
 ﻿@using Resume.Models
-@inject IJSRuntime JSRuntime
 
 @if(Company is not null)
 {
-    <MudStack Row="true" Wrap="@wrapMode" AlignItems="AlignItems.Center" Style="margin-bottom:2em;">
-        <MudImage Style="border-radius: 10px" Fluid="true" ObjectFit="ObjectFit.Cover" Src="@Company.ImageLink" Alt="@Company.AltText" />
+    <MudStack Row="true" Wrap="Wrap.Wrap" AlignItems="AlignItems.Center">
+        <MudImage Style="border-radius: 10px" Height="150" Width="150" Src="@Company.ImageLink" Alt="@Company.AltText" />
         <div>
             <MudText Typo="Typo.h4">@Company.CompanyName</MudText>
             <MudText Typo="Typo.h5">@Company.Location</MudText>
-            <MudText Typo="Typo.body1">@Company.Summary</MudText>
             <MudLink Href="@Company.ExternalLink" Target="_blank">@Company.ExternalLink</MudLink>
         </div>
     </MudStack>
+
+    <MudText Typo="Typo.body1" Style="@_marginBottom">@Company.Summary</MudText>
 }
 
 @code {
     [Parameter] public Company? Company { get; set; }
+    [Parameter] public string MarginBottom { get; set; } = "0em";
 
-    private Wrap wrapMode = Wrap.NoWrap;
-
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        if (firstRender)
-        {
-            await JSRuntime.InvokeVoidAsync("resizeObserver.observe", DotNetObjectReference.Create(this));
-        }
-    }
-
-    [JSInvokable]
-    public void OnResize(int width)
-    {
-        if (width < 600)
-        {
-            wrapMode = Wrap.Wrap;
-        }
-        else
-        {
-            wrapMode = Wrap.NoWrap;
-        }
-
-        InvokeAsync(StateHasChanged);
-    }
+    private string _marginBottom => $"margin-bottom:{MarginBottom}";
 }
