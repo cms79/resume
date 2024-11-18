@@ -8,4 +8,6 @@ public class Company
     public string Summary { get; set; } = string.Empty;
     public string ExternalLink { get; set; } = string.Empty;
     public string AltText => $"Logo for {CompanyName}";
+
+    public IEnumerable<Experience> Experiences { get; set; } = [];
 }
