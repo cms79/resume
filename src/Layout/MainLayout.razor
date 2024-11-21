@@ -9,12 +9,14 @@
 </MudScrollToTop>
 
 <MudLayout>
-     <MudAppBar WrapContent="true"  >
-        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
+     <MudAppBar WrapContent="true" Dense="true" >
+         <MudSpacer />
+        <MudLink Color="Color.Inherit" Href="https://www.biblegateway.com/passage/?search=eph%202%3A13&version=ESV" Target="_blank" Typo="Typo.body2" Style="font-style:italic;font-size:small;" >Eph. 2:13</MudLink>
+        @* <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" /> *@
     </MudAppBar>
-    <MudDrawer @bind-Open="@_drawerOpen">
+@*     <MudDrawer @bind-Open="@_drawerOpen">
         <NavMenu/>
-    </MudDrawer>
+    </MudDrawer> *@
      <MudMainContent>
         <MudContainer MaxWidth="MaxWidth.Medium">
             @Body

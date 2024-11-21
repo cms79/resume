@@ -1,8 +1,11 @@
 ﻿@using Resume.Models
 
 <MudText Typo="Typo.h5">@Experience?.Title</MudText>
-<MudText Typo="Typo.body1">@Experience?.Date</MudText>
-<MudText Typo="Typo.body1" Style="margin-bottom:1em;">@Experience?.Summary</MudText>
+<MudText Typo="Typo.body1" Style="margin-bottom:1em;">@Experience?.Date</MudText>
+@foreach(var item in Experience?.Summary ?? [])
+{
+    <MudText Typo="Typo.body1" Style="margin-bottom:1em;">@item</MudText>
+}
 
 @code {
     [Parameter] public Experience? Experience { get; set; }

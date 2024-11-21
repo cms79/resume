@@ -1,12 +1,45 @@
 ﻿@using Resume.Components
 
-<MudText Typo="Typo.h2" GutterBottom="true">Primary Tech Stack</MudText>
+@* <MudText Typo="Typo.h4" GutterBottom="true">Tech Stack</MudText> *@
 
-<MudStack Row="true" Wrap="Wrap.Wrap" AlignItems="AlignItems.Start">
-    <TechStackLogoComponent ImageLink="/images/net-core-logo.svg" Name=".NET Core" />
-    <TechStackLogoComponent ImageLink="/images/blazor-logo.png" Name="Blazor" />
-    <TechStackLogoComponent ImageLink="/images/sql-server-logo.png" Name="SQL Server" />
-    <TechStackLogoComponent ImageLink="/images/azure-logo.svg" Name="Azure" />
-    <TechStackLogoComponent ImageLink="/images/github-mark.svg" Name="Github" />
-    <TechStackLogoComponent ImageLink="/images/docker-mark-blue.svg" Name="Docker" />
-</MudStack>
+<MudSimpleTable Class="summary-table" Dense="true" Bordered="false" Outlined="false" Elevation="0">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Tech</th>
+            <th>Years</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><MudImage Src="/images/net-core-logo.svg" Alt=".NET Core" Width="40" /></td>
+            <td>C#/.NET</td>
+            <td>@(DateTime.Now.Year - 2008)</td>
+        </tr>
+        <tr>
+            <td><MudImage Src="/images/sql-server-logo.png" Alt="SQL Server" Width="40" /></td>
+            <td>SQL Server</td>
+            <td>@(DateTime.Now.Year - 2008)</td>
+        </tr>
+        <tr>
+            <td><MudImage Src="/images/github-mark.svg" Alt="GitHub" Width="40" /></td>
+            <td>GitHub</td>
+            <td>@(DateTime.Now.Year - 2012)</td>
+        </tr>
+        <tr>
+            <td><MudImage Src="/images/docker-mark-blue.svg" Alt="Docker" Width="40" /></td>
+            <td>Docker</td>
+            <td>@(DateTime.Now.Year - 2019)</td>
+        </tr>
+        <tr>
+            <td><MudImage Src="/images/azure-logo.svg" Alt="Azure" Width="40" /></td>
+            <td>Azure</td>
+            <td>@(DateTime.Now.Year - 2021)</td>
+        </tr>
+        <tr>
+            <td><MudImage Src="/images/blazor-logo.png" Alt="Blazor" Width="40" /></td>
+            <td>Blazor</td>
+            <td>@(DateTime.Now.Year - 2022)</td>
+        </tr>
+    </tbody>
+</MudSimpleTable>

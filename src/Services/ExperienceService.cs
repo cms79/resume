@@ -25,7 +25,11 @@ public class ExperienceService : IExperienceService
                 {
                     Title = "Senior Lead Consultant",
                     Date = "2021 - Present",
-                    Summary = "Design and develop legacy and greenfield software solutions for multiple clients. Primary clients include Cinemark and Texas Education Agency."
+                    Summary =
+                    [
+                        "Currently, I provide consultation and support to the Cinemark development team, offering recommendations, implementing features, conducting research, fixing bugs, and performing code reviews for www.cinemark.com. Tech stack: Azure, .NET 4.8/C#, MVC, TypeScript, HTML/CSS, and SQL Server.",
+                        "Previously, led a team in developing and delivering the TA Dashboard application for the Texas Education Agency (TEA). Began with initial design and delivered MVP within 10 months, including integration with 3rd party systems. Helped gather requirements from clients, conducted countless demos and training sessions with stakeholders and end users, setup deploy pipelines, migrated the application from Azure to TEA’s on-prem environment, and collaborated with TEA on multiple fronts, helping to maintain excellent client relations. Tech stack: .NET 7, Blazor, Mudblazor, REST API, EF Core, SQL Server."
+                    ]
                 }
             ]
         },
@@ -42,7 +46,10 @@ public class ExperienceService : IExperienceService
                 {
                     Title = "Principal Software Engineer",
                     Date = "2021 - 2021",
-                    Summary = "Design and develop video, messaging, and alert software in support of Dept. of Homeland Security."
+                    Summary = 
+                    [
+                        "Develop and deploy software in support of the Dept. of Homeland Security contract. Development includes standalone applications and microservices/distributed systems using Docker/containerization. Projects include live video processing, GPS/GIS, REST API, SQL Server, messaging/NetMQ, and .NET Core."
+                    ]
                 }
             ]
         },
@@ -59,13 +66,19 @@ public class ExperienceService : IExperienceService
                 {
                     Title = "Team Lead/Anchor",
                     Date = "2019 - 2021",
-                    Summary = "Lead agile team of engineers, implementation specialists, QA, and product managers to deliver loyalty software solution for Essilor."
+                    Summary = 
+                    [
+                        "I led an agile team of four engineers, a product owner, and product manager and delivered loyalty software to the world’s largest provider of ophthalmic lenses. I was assigned this challenging role where the client was on the verge of canceling the contract due to repeated missed deliveries. After six months of successful releases, the team secured a contract renewal. In addition to facilitating the team’s agile/SCRUM ceremonies, I led the conversion from TortoiseSVN to GitHub and transitioned the team to CI/CD practices in addition to leading design sessions and ensuring that client-focused, maintainable solutions are adopted. Maintained client-facing website at https://rewards.essilorusa.com."
+                    ]
                 },
                 new()
                 {
                     Title = "Senior Software Engineer",
                     Date = "2018 - 2019",
-                    Summary = "Designed, developed, and deployed REST API loyalty application for new client, The Children's Place."
+                    Summary = 
+                    [
+                        "Implemented Brierley’s LoyaltyOnDemand software for The Children’s Place. Maintained existing core REST endpoints in addition to creating new custom endpoints that successfully processes millions of transactions per month. Developed in the C#/.NET environment in Visual Studio. Validated APIs and wrote test scripts in Postman. Created ad-hoc Oracle SQL queries for research, testing, and data cleanup. Wrote unit/integration tests."
+                    ]
                 }
             ]
         },
@@ -82,19 +95,28 @@ public class ExperienceService : IExperienceService
                 {
                     Title = "Senior Software Engineer",
                     Date = "2016 - 2018",
-                    Summary = "Developed and maintained the industry-leading Odyssey File & Serve product suite, which allows attorneys and self-represented litigants to e-file into court management systems across the country. Created and maintained SOAP APIs with C#/.NET and SQL Server on the backend. Used SOAP UI for testing and validation."
+                    Summary = 
+                    [
+                        "Developed and maintained the industry-leading Odyssey File & Serve product suite, which allows attorneys and self-represented litigants to e-file into court management systems across the country. Created and maintained SOAP APIs with C#/.NET and SQL Server on the backend. Used SOAP UI for testing and validation."
+                    ]
                 },
                 new()
                 {
                     Title = "Business Analyst",
                     Date = "2014 - 2016",
-                    Summary = "Work directly with clients and developers to ensure clients receive quality software solutions that meet their business needs. Visit clients and cultivate lasting customer relationships. Gather and elicit requirements. Groom stories in collaboration with development team. Act as liaison between development and support teams. Investigate possible defects, data issues, and setup problems when support cannot resolve. Apply data fixes to production data in SQL. Coordinate client software updates. Manage early adoption for each software release."
+                    Summary =
+                    [
+                        "Work directly with clients and developers to ensure clients receive quality software solutions that meet their business needs. Visit clients and cultivate lasting customer relationships. Gather and elicit requirements. Groom stories in collaboration with development team. Act as liaison between development and support teams. Investigate possible defects, data issues, and setup problems when support cannot resolve. Apply data fixes to production data in SQL. Coordinate client software updates. Manage early adoption for each software release."
+                    ]
                 },
                 new()
                 {
                     Title = "Software Developer",
                     Date = "2011 - 2014",
-                    Summary = "Create enterprise software applications for municipal courts across the United States. Analyze design requirements for new features and enhancements, fix defects, perform testing, and support product implementation. Develop & maintain stored procedures, table-valued functions, and scalar functions. Use SQL Profiler to troubleshoot database issues. Visit client sites to analyze business process and develop customer relationships. Use Agile/SCRUM process."
+                    Summary =
+                    [
+                        "Create enterprise software applications for municipal courts across the United States. Analyze design requirements for new features and enhancements, fix defects, perform testing, and support product implementation. Develop & maintain stored procedures, table-valued functions, and scalar functions. Use SQL Profiler to troubleshoot database issues. Visit client sites to analyze business processes and develop customer relationships. Use Agile/SCRUM process."
+                    ]
                 }
             ]
         },
@@ -111,7 +133,10 @@ public class ExperienceService : IExperienceService
                 {
                     Title = "Computer Systems Analyst II",
                     Date = "2008 - 2011",
-                    Summary = "Developed applications for the US Army that parsed classified and non-classified data in real-time from tactical networks, including TCP/IP packets. Possessed a Top-Secret Security Clearance."
+                    Summary =
+                    [
+                        "Developed applications for the US Army that parsed classified and non-classified data in real-time from tactical networks, including TCP/IP packets. Possessed a Top-Secret Security Clearance."
+                    ]
                 }
             ]
         },
@@ -128,7 +153,10 @@ public class ExperienceService : IExperienceService
                 {
                     Title = "Sergeant/Team Chief",
                     Date = "1999 - 2005",
-                    Summary = "Supervised small communications team in support of Operation Iraqi Freedom. Deployed tactical radio network to support over 200 users in Baghdad, Iraq. Served as liaison for Brigade staff and supporting units. Installed and diagnosed communication systems including FBCB2, EPLRS, and SINCGARS. Trained soldiers in the operation of Army communication systems. Stored, used, and properly destroyed sensitive equipment and documents without incident in accordance with SOP. Possessed a Secret Security Clearance."
+                    Summary =
+                    [
+                        "Supervised small communications team in support of Operation Iraqi Freedom. Deployed tactical radio network to support over 200 users in Baghdad, Iraq. Served as liaison for Brigade staff and supporting units. Installed and diagnosed communication systems including FBCB2, EPLRS, and SINCGARS. Trained soldiers in the operation of Army communication systems. Stored, used, and properly destroyed sensitive equipment and documents without incident in accordance with SOP. Possessed a Secret Security Clearance."
+                    ]
                 }
             ]
         }

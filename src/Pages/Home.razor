@@ -3,8 +3,8 @@
 
 <PageTitle>Christopher Shaw</PageTitle>
 
-<div class="background-image-container" style="background-image: url('/images/shaw-bjj-office-wide.jpg');margin-bottom:2em;">
-    <div class="overlay-text">
+<div class="home__background-image-container" style="background-image: url('/images/shaw-bjj-office-wide.jpg');margin-bottom:2em;">
+    <div class="overlay-text" style="padding: 1em;">
         <MudText Typo="Typo.h2">Christopher Shaw</MudText>
         <MudStack Row="true" Justify="Justify.Center" AlignItems="AlignItems.Center">
             <MudText Typo="Typo.h6" Align="Align.Center">Consultant</MudText>
@@ -16,29 +16,35 @@
     </div>
 </div>
 
-<MudText Typo="Typo.body1" GutterBottom="true">
-    I am a passionate technology enthusiast dedicated to leveraging modern software
-    to deliver innovative solutions that enhance everyday life.
-    With extensive expertise in the Microsoft .NET tech stack since 2008,
-    I excel at transforming complex challenges into seamless, user-focused applications.
-    As a former non-commissioned officer in the United States Army,
-    I bring a disciplined, mission-driven approach to problem-solving and team collaboration.
-</MudText>
+<MudGrid Justify="Justify.FlexStart">
+    <MudItem md="8">
+        <MudText Typo="Typo.body1" Style="font-size:1.5em;font-weight:200;" GutterBottom="true">
+            <span style="font-weight:500">Welcome!</span> I’m a professional software engineer and technology consultant with extensive experience in the Microsoft .NET tech stack.
+        </MudText>
 
-<MudText Typo="Typo.body1" GutterBottom="true">
-    To contact me, visit my <MudLink Href="https://www.linkedin.com/in/cshaw79" Target="_blank">LinkedIn profile</MudLink>.
-    If you're interested in jiu-jitsu, follow me on <MudLink Href="https://www.instagram.com/cshawbjj/" Target="_blank">Instagram</MudLink>.
-</MudText>
+        <MudText Typo="Typo.body1" Style="font-size:1.5em;font-weight:200;" GutterBottom="true">
+            Starting as a desktop developer, I’ve since transitioned into full-stack web development,
+            where I’ve worked as a developer, team lead, and consultant.
+            My background as a former non-commissioned officer in the United States Army instilled in me
+            the principles of servant leadership, which I bring to each project to help solve complex technical challenges.
+        </MudText>
 
-<MudText Typo="Typo.body1">
-    This site was developed using <MudLink Href="https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor" Target="_blank">Blazor WebAssembly</MudLink>,
-    <MudLink Href="https://mudblazor.com/" Target="_blank">MudBlazor</MudLink>,
-    and <MudLink Href="https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-9/overview" Target="_blank">.NET 9</MudLink>.
-    The source code is available on <MudLink Href="https://github.com/cms79/resume" Target="_blank">GitHub</MudLink>.
-</MudText>
+        <MudText Typo="Typo.body1" Style="font-size:1em;font-weight:100;" GutterBottom="true">
+            To contact me, visit my <MudLink Href="https://www.linkedin.com/in/cshaw79" Target="_blank">LinkedIn profile</MudLink>.
+            If you're interested in jiu-jitsu, follow me on <MudLink Href="https://www.instagram.com/cshawbjj/" Target="_blank">Instagram</MudLink>.
+        </MudText>
 
-<div id="techstack" class="page-div"></div>
-<TechStack />
+        <MudText Typo="Typo.body1" Style="font-size:1em;font-weight:100;">
+            This site was developed using <MudLink Href="https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor" Target="_blank">Blazor WebAssembly</MudLink>,
+            <MudLink Href="https://mudblazor.com/" Target="_blank">MudBlazor</MudLink>,
+            and <MudLink Href="https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-9/overview" Target="_blank">.NET 9</MudLink>.
+            The source code is available on <MudLink Href="https://github.com/cms79/resume" Target="_blank">GitHub</MudLink>.
+        </MudText>
+    </MudItem>
+    <MudItem md="4">
+        <TechStack />
+    </MudItem>
+</MudGrid>
 
 <div id="experience" class="page-div"></div>
 <Experience />

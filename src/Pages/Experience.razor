@@ -7,7 +7,9 @@
 
 @foreach (var company in _companies)
 {
-    <CompanyComponent Company="@company" MarginBottom="2em" />
+    <div style="margin:2em 0 2em 0;">
+        <CompanyComponent Company="@company" />
+    </div>
 
     @foreach (var experience in company?.Experiences ?? [])
     {
