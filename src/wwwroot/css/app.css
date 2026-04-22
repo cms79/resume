@@ -123,6 +123,61 @@ h1:focus {
     overflow-x: auto;
 }
 
+.experience-summary {
+    border-left: 4px solid var(--mud-palette-primary);
+    padding-left: 1rem;
+    margin-bottom: 2.5rem;
+    max-width: 900px;
+}
+
+.experience-summary-stack {
+    opacity: 0.9;
+}
+
+.clients-intro {
+    max-width: 900px;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.clients-grid {
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.client-link {
+    text-decoration: none;
+}
+
+.client-logo-card {
+    width: 180px;
+    height: 180px;
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.client-logo-card-wide {
+    width: 260px;
+}
+
+.client-logo-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0.14);
+}
+
+.client-logo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
 /* Media query for screens less than 600px wide */
 @media (max-width: 600px) {
 }

@@ -1,16 +1,31 @@
 ﻿<MudText Typo="Typo.h2" GutterBottom="true">Clients</MudText>
 
-<MudStack Row="true">
-    <MudLink Href="https://www.cinemark.com" Target="_blank">
-        <MudImage Style="border-radius: 10px" Height="150" Width="150" Src="/images/cinemark-logo.png" Alt="Cinemark Logo" />
+<MudText Typo="Typo.body1" Class="clients-intro">
+    Organizations I’ve supported through consulting, development, and technical leadership.
+</MudText>
+
+<MudStack Row="true" Wrap="Wrap.Wrap" Spacing="3" Class="clients-grid">
+    <MudLink Href="https://www.cinemark.com" Target="_blank" Class="client-link">
+        <div class="client-logo-card">
+            <MudImage Class="client-logo" Src="/images/cinemark-logo.png" Alt="Cinemark Logo" />
+        </div>
     </MudLink>
-    <MudLink Href="https://tea.texas.gov/" Target="_blank">
-        <MudImage Style="border-radius: 10px" Height="150" Width="150" Src="/images/tea-logo.png" Alt="TEA Logo" />
+
+    <MudLink Href="https://tea.texas.gov/" Target="_blank" Class="client-link">
+        <div class="client-logo-card">
+            <MudImage Class="client-logo" Src="/images/tea-logo.png" Alt="TEA Logo" />
+        </div>
     </MudLink>
-    <MudLink Href="https://rewards.essilorusa.com/" Target="_blank">
-        <MudImage Style="border-radius: 10px" Height="150" Width="150" Src="/images/essilor-logo.png" Alt="Essilor Logo" />
+
+    <MudLink Href="https://rewards.essilorusa.com/" Target="_blank" Class="client-link">
+        <div class="client-logo-card">
+            <MudImage Class="client-logo" Src="/images/essilor-logo.png" Alt="Essilor Logo" />
+        </div>
     </MudLink>
-    <MudLink Href="https://tammyoveross.com/" Target="_blank">
-        <MudImage Style="border-radius: 10px" Height="150" Src="/images/tammy-oveross-logo.png" Alt="Tammy Oveross Logo" />
+
+    <MudLink Href="https://tammyoveross.com/" Target="_blank" Class="client-link">
+        <div class="client-logo-card client-logo-card-wide">
+            <MudImage Class="client-logo" Src="/images/tammy-oveross-logo.png" Alt="Tammy Oveross Logo" />
+        </div>
     </MudLink>
 </MudStack>
